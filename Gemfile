@@ -1,16 +1,18 @@
 source 'https://rubygems.org'
 
 gem 'sinatra', require: 'sinatra/base'
-gem 'redcarpet'
+gem 'rdiscount'
 gem 'sprockets'
-#gem 'activerecord'
-#gem 'sinatra-activerecord', require: 'sinatra/activerecord'
+gem 'activerecord' # rake db:create_migration NAME=create_appropriate_name
+gem 'sinatra-activerecord', require: 'sinatra/activerecord'
 gem 'rake'
 gem 'uglifier'
 gem 'sass'
+gem 'bootstrap-sass'
+gem 'figaro' # bundle exec figaro install
 
 group :development do
-  #gem 'sqlite3'
+  gem 'sqlite3'
   gem 'sinatra-contrib', require: 'sinatra/reloader'
 end
 
