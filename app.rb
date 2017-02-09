@@ -27,4 +27,8 @@ class MyApp < Sinatra::Base
   get "/about" do
     erb :about
   end
+  
+  get "/services" do
+    erb :services
+  end
 end
