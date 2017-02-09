@@ -1,5 +1,201 @@
 @import "bootstrap";
 
-h1 {
-  background: red;
+@import url(https://fonts.googleapis.com/css?family=Crafty+Girls|Montserrat);
+
+body {
+  color: #544a42;
+  background-color: #faf0e8;
+}
+
+.jumbotron {
+  background-color: #ff9744;
+}
+
+.navbar {
+  background-color: #ff9744;
+  z-index: 5;
+}
+
+#myNavbar li {
+  border-style: solid;
+  border-color: #ff9744;
+  background-color: #77D0CD;
+}
+
+.paw {
+  list-style-image: url('../media/paw_print.png');
+}
+
+.logo, .subtitle, .navbar-brand, h2, h3 {
+  font-family: "Crafty Girls";
+}
+
+#widdle {
+  margin-top: 20px;
+}
+
+.logo {
+  font-size: 4.75em;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 2em;
+}
+
+p, a, li, .contactList, .form-group {
+  font-family: Montserrat;
+}
+
+a {
+  &:link, &:visited {
+    color: #544a42;
+  }
+}
+
+.locNav {
+  color: #544a42;
+}
+
+#navTabs li {
+  border-bottom: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-style: solid;
+  border-color: #faf0e8;
+  background-color: #77D0CD;
+}
+
+.navbar-brand {
+  font-size: 1.75em;
+  height: 100px;
+}
+
+#myNavbar {
+  max-width: 555px;
+}
+
+.tab-pane {
+  font-size: 1.25em;
+  overflow: auto;
+}
+
+#puppySmile, #jenna {
+  padding: 5px;
+  max-width: 50%;
+  float: right;
+}
+
+#mapTab {
+  width: 80%;
+  height: 50%;
+  margin-bottom: 10px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.contactInfo {
+  text-align: right;
+}
+
+#testimony {
+  display: hidden;
+  margin-top: 5px;
+  padding: 5px;
+  border: 5px;
+  width: 80%;
+  height: 50%;
+  background-color: #77D0CD;
+  box-shadow: 2px 2px 5px #544a42;
+  z-index: 10;
+}
+
+#testimonyTitle {
+  color: #ff9744;
+  text-shadow: 2px 2px 4px #544a42;
+}
+
+.tab-pane {
+  border: 5px;
+  border-style: solid;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 5px #544a42;
+}
+
+#locationTab {
+  height: 600px;
+}
+
+.item {
+  max-height: 680px;
+}
+
+#siteContent {
+  margin-bottom: 10px;
+}
+
+.splash {
+  opacity: .90;
+  visibility: visible;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#testimonyCont {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-10%, -50%);
+}
+
+@media screen and (max-width: 394px) {
+  .logo {
+    font-size: 3.75em;
+  }
+  .subtitle {
+    font-size: 1.75em;
+  }
+  .tab-pane {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #navTabs li, .jumbotron {
+    visibility: hidden;
+    height: 60px;
+  }
+  #testimony {
+    height: 75%;
+  }
+}
+
+@media (min-width: 661px) {
+  .navbar {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #logopic {
+    max-height: 300px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 920px) {
+  .logo {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1148px) {
+  .logo {
+    font-size: 3.75em;
+  }
 }
