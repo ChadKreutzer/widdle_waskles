@@ -13,22 +13,15 @@ class MyApp < Sinatra::Base
   # compress assets
   environment.js_compressor  = :uglify
   environment.css_compressor = :scss
-
+  
   # get assets
   get "/assets/*" do
     env["PATH_INFO"].sub!("/assets", "")
     settings.environment.call(env)
   end
 
-  get "/" do
+  get '/' do
     erb :index
   end
   
-  get "/about" do
-    erb :about
-  end
-  
-  get "/services" do
-    erb :services
-  end
 end

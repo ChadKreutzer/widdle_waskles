@@ -1,5 +1,9 @@
-@import "bootstrap";
+/*
+*= require font-awesome
+*= require animate
+*/
 
+@import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Crafty+Girls|Montserrat);
 
 body {
@@ -23,7 +27,7 @@ body {
 }
 
 .paw {
-  list-style-image: url('images/paw_print.png');
+  list-style-image: url('/images/paw_print.png');
 }
 
 .logo, .subtitle, .navbar-brand, h2, h3 {
