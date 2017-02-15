@@ -9,6 +9,7 @@ gem 'rake'
 gem 'uglifier'
 gem 'sass'
 gem 'bootstrap-sass'
+gem 'pony'
 gem 'figaro' # bundle exec figaro install
 
 group :development do
