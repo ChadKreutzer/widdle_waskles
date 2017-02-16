@@ -86,7 +86,7 @@ services.each do | service, pet_type, price |
 end
 
 # url caption
-pictures = [
+photos = [
   [
 		"images/blue_wall.jpg",
 		"Shaggy dog looking good in front of a blue wall."
@@ -109,6 +109,6 @@ pictures = [
 	]
 ]
 
-pictures.each do | review, name |
-  picture.create(url: url, caption: caption)
+photos.each do | review, name |
+  Photo.create(url: url, caption: caption)
 end
