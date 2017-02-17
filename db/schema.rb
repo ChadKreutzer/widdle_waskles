@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170216110026) do
     t.string "price"
   end
 
-  create_table "testemonials", force: :cascade do |t|
+  create_table "testimonials", force: :cascade do |t|
     t.string "review"
     t.string "name"
   end

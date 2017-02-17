@@ -1,5 +1,5 @@
 # review name
-testemonials = [
+testimonials = [
   [
 		"Just got my 2 kiddos groomed today. Jenna is amazing! My dogs and I felt at home as soon as we walked in. She really focuses on them feeling relaxed and not scared. My dogs were happy and loving on her when we picked them up. My kiddos smell so yummy. I will be taking them to her regularly. I highly recommend Widdle Waskles!",
 		"Deb Bokelman"
@@ -58,7 +58,7 @@ testemonials = [
 	]
 ]
 
-testemonials.each do | review, name |
+testimonials.each do | review, name |
   Testimonial.create(review: review, name: name)
 end
 
