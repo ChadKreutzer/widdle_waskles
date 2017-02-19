@@ -21,9 +21,6 @@ class MyApp < Sinatra::Base
   end
 
   get '/' do
-    @testimonials = Testimonial.all
-    @photos = Photo.all
-    @services = Service.all
     erb :index
   end
   
