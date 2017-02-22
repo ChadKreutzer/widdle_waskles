@@ -1,0 +1,19 @@
+<h2>All Testimonials</h2>
+<hr>
+<ul>
+  <% @testimonials.each do |testimonial| %>
+    <li>
+      <a href="/testimonial/<%= testimonial.id %>"><%= testimonial.name %></a>
+    </li>
+  <% end %>
+</ul>
+<hr>
+<h2>Add Testimonials</h2>
+<hr>
+<form method="post" action="/testimonial/new">
+  <label for="story">Testimonial:</label>
+  <input type="text" name="story">
+  <label for="Name">Name: </label>
+  <input type="text" name="name">
+  <input type ="submit" value="Add Testimonial">
+</form>
