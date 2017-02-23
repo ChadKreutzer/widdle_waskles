@@ -7,3 +7,4 @@ Website for Jenna's dog grooming business
 * Implement Before and After Pictures
 * Implement Specials
 * Password protect CMS
+* Implement Mail
