@@ -106,12 +106,14 @@ a {
 }
 
 #testimony {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: hidden;
   margin-top: 5px;
   padding: 5px;
   border: 5px;
-  width: 80%;
-  height: 50%;
   background-color: #77D0CD;
   box-shadow: 2px 2px 5px #544a42;
   z-index: 10;
@@ -149,13 +151,6 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-#testimonyCont {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-10%, -50%);
 }
 
 @media screen and (max-width: 394px) {

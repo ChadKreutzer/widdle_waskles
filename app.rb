@@ -21,9 +21,11 @@ class MyApp < Sinatra::Base
   end
 
   get '/' do
+    @testimonial = Testimonial.order("RANDOM()").first
     erb :index
   end
   
+  # Testimonials Database CRUD
   post '/testimonials/new' do
     @testimonial = Testimonial.create(story: params[:story], name: params[:name])
     redirect '/testimonials'
