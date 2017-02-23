@@ -54,4 +54,39 @@ class MyApp < Sinatra::Base
     redirect '/testimonials'
   end
   
+  # Specials Database CRUD
+  post '/specials/new' do
+    @special = Special.create(headline: params[:headline],
+                              offer: params[:offer],
+                              expires: params[:expires]
+                              )
+    redirect '/specials'
+  end
+  
+  get '/specials' do
+    @specials = Special.all
+    erb :'specials/index', :layout => false
+  end
+  
+  get "/specials/:id" do
+    @special = Special.find(params[:id])
+    erb :'specials/post_page', :layout => false
+  end
+  
+  put '/specials/:id' do
+    @special = Special.find(params[:id])
+    @special.update(headline: params[:headline],
+                    offer: params[:offer],
+                    expires: params[:expires]
+                    )
+    @special.save
+    redirect '/specials/' + params[:id]
+  end
+  
+  delete '/specials/:id/delete' do
+    @special = Special.find(params[:id])
+    @special.destroy
+    redirect '/specials'
+  end
+  
 end
