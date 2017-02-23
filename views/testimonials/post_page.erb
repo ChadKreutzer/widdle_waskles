@@ -1,11 +1,17 @@
 <h2><%= @testimonial.name %></h2>
 <p><%= @testimonial.story %></p>
-<a href="/testimonial/<%= @testimonial.id %>" name="_method" value="delete">Delete Post</a>
+
+<form method="post" action="/testimonials/<%= @testimonial.id %>/delete">
+    <input type="hidden" name="_method" value="delete">
+    <button type="submit">Delete Post</button>
+</form>
 
 <h2>Edit Post</h2>
-<form method="post" action="/testimonial/<%= @testimonial.id %>"> 
+<form method="post" action="/testimonials/<%= @testimonial.id %>"> 
     <input type="hidden" name="_method" value="put">
     <input type="text" name="story" value="<%= @testimonial.story %>">
     <input type="text" name="name" value="<%= @testimonial.name %>">
     <button type="submit">Update Post</button>
 </form>
+
+<a href="/testimonials">Back to List</a>

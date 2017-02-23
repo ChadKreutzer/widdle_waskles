@@ -24,7 +24,7 @@ class MyApp < Sinatra::Base
     erb :index
   end
   
-  post '/testimonial/new' do
+  post '/testimonials/new' do
     @testimonial = Testimonial.create(story: params[:story], name: params[:name])
     redirect '/testimonials'
   end
@@ -34,19 +34,19 @@ class MyApp < Sinatra::Base
     erb :'testimonials/index', :layout => false
   end
   
-  get "/testimonial/:id" do
+  get "/testimonials/:id" do
     @testimonial = Testimonial.find(params[:id])
     erb :'testimonials/post_page', :layout => false
   end
   
-  put '/testimonial/:id' do
+  put '/testimonials/:id' do
     @testimonial = Testimonial.find(params[:id])
     @testimonial.update(story: params[:story], name: params[:name])
     @testimonial.save
-    redirect '/testimonial/'+params[:id]
+    redirect '/testimonials/' + params[:id]
   end
   
-  delete '/testimonial/:id' do
+  delete '/testimonials/:id/delete' do
     @testimonial = Testimonial.find(params[:id])
     @testimonial.destroy
     redirect '/testimonials'

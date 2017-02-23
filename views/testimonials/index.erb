@@ -3,14 +3,14 @@
 <ul>
   <% @testimonials.each do |testimonial| %>
     <li>
-      <a href="/testimonial/<%= testimonial.id %>"><%= testimonial.name %></a>
+      <a href="/testimonials/<%= testimonial.id %>"><%= testimonial.name %></a>
     </li>
   <% end %>
 </ul>
 <hr>
 <h2>Add Testimonials</h2>
 <hr>
-<form method="post" action="/testimonial/new">
+<form method="post" action="/testimonials/new">
   <label for="story">Testimonial:</label>
   <input type="text" name="story">
   <label for="Name">Name: </label>
