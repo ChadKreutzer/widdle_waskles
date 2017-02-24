@@ -10,8 +10,8 @@
 <ul>
   <% @specials.each do |special| %>
     <li>
-      <a href="/specials/<%= special.id %>"><%= special.headline %></a><br>
-      <p>Expires: <%= special.expires %></p>
+      <a href="/specials/<%= special.id %>"><%= special.headline %> </a>
+      <p>Expires: <%= special.expires.strftime("%m/%d/%y") %></p>
     </li>
   <% end %>
 </ul>
@@ -19,18 +19,15 @@
 <h2>Add Specials</h2>
 <hr>
 
-<div class="row">
-  <form class="col-xs-10" method="post" action="/specials/new">
-    <label for="headline">Headline:</label>
-    <input class="form-control" type="text" name="headline">
-    <label for="offer">Offer:</label>
-    <textarea class="form-control" rows="3" cols="50" name="offer"></textarea>
-    <label for="expires">Expires:</label>
-    <input class="form-control" type="date" name="expires">
-    <button type ="submit">Add Special</button>
-  </form>
-</div>
-
+<form method="post" action="/specials/new">
+  <label for="headline">Headline:</label><br>
+  <input type="text" name="headline"><br>
+  <label for="offer">Offer:</label><br>
+  <textarea rows="3" cols="50" name="offer"></textarea><br>
+  <label for="expires">Expires:</label><br>
+  <input class="date" type="date" name="expires">
+  <button type ="submit">Add Special</button>
+</form>
 
 <script src="assets/app.js"></script>
 </body>

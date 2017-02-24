@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="assets/app.css">
+<link rel="stylesheet" href="../assets/app.css">
 </head>
 <body>
 
 <h2><%= @special.headline %></h2>
 <p><%= @special.offer %></p>
-<p>Expires: <%= @special.expires %></p>
+<p>Expires: <%= @special.expires.strftime("%m/%d/%y") %></p>
 
 <form method="post" action="/specials/<%= @special.id %>/delete">
     <input type="hidden" name="_method" value="delete">
@@ -17,14 +17,17 @@
 <h2>Edit Post</h2>
 <form method="post" action="/specials/<%= @special.id %>"> 
     <input type="hidden" name="_method" value="put">
-    <input type="string" name="headline" value="<%= @special.headline %>">
-    <input type="text" name="offer" value="<%= @special.offer %>">
-    <input type="date" name="expires" value="<%= @special.expires %>">
+    <label for="headline">Headline:</label><br>
+    <input type="text" name="headline" value="<%= @special.headline %>"><br>
+    <label for="offer">Offer:</label><br>
+    <textarea rows="3" cols="50" name="offer"><%= @special.offer %></textarea><br>
+    <label for="expires">Expires:</label><br>
+    <input class="date" type="date" name="expires" value="<%= @special.expires %>">
     <button type="submit">Update Post</button>
 </form>
 
 <a href="/specials">Back to List</a>
 
-<script src="assets/app.js"></script>
+<script src="../assets/app.js"></script>
 </body>
 </html>

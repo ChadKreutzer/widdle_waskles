@@ -5,4 +5,15 @@ $(document).ready(function(){
         $(this).removeClass("splash");
       });
    }, 15000);
+   
+  (function() {
+      var elem = document.createElement('input');
+      elem.setAttribute('type', 'date');
+ 
+      if ( elem.type === 'text' ) {
+        $('.date').datepicker({
+          dateFormat: 'yy-mm-dd'
+        }); 
+      }
+   })();
 });
