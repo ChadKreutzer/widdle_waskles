@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
 <h2>All Specials</h2>
 <hr>
 <ul>
@@ -11,12 +18,20 @@
 <hr>
 <h2>Add Specials</h2>
 <hr>
-<form method="post" action="/specials/new">
-  <label for="headline">Headline:</label>
-  <input type="text" name="headline">
-  <label for="offer">Offer:</label>
-  <input type="text" name="offer">
-  <label for="expires">Expires:</label>
-  <input type="date" name="expires">
-  <input type ="submit" value="Add Special">
-</form>
+
+<div class="row">
+  <form class="col-xs-10" method="post" action="/specials/new">
+    <label for="headline">Headline:</label>
+    <input class="form-control" type="text" name="headline">
+    <label for="offer">Offer:</label>
+    <textarea class="form-control" rows="3" cols="50" name="offer"></textarea>
+    <label for="expires">Expires:</label>
+    <input class="form-control" type="date" name="expires">
+    <button type ="submit">Add Special</button>
+  </form>
+</div>
+
+
+<script src="assets/app.js"></script>
+</body>
+</html>
