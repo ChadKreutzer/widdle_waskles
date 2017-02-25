@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<h2>All Photos</h2>
+<hr>
+<div class="container">
+  <ul>
+    <% @photos.each do |photo| %>
+      <li>
+        <a href="/photos/<%= photo.id %>"><%= photo.caption %></a>
+      </li>
+    <% end %>
+  </ul>
+  <hr>
+  <h2>Add Photos</h2>
+  <hr>
+  
+  <form method="post" action="/photos/new">
+    <label for="before_filename">Before:</label><br>
+    <input type="file" name="before_filename"><br>
+    <label for="after_filename">After:</label><br>
+    <input type="file" name="after_filename"><br>
+    <label for="caption">Caption:</label><br>
+    <input type="text" name="caption">
+    <button type ="submit">Add Photo</button>
+  </form>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
