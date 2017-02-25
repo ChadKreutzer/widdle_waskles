@@ -4,7 +4,7 @@ $(document).ready(function(){
       $("#testimony").fadeOut(2000, function() {
         $(this).removeClass("splash");
       });
-   }, 15000);
+   }, 5000);
    
   (function() {
       var elem = document.createElement('input');

@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 gem 'figaro' # bundle exec figaro install
 
 group :development do
+  gem 'tux'
   gem 'sqlite3'
   gem 'sinatra-contrib', require: 'sinatra/reloader'
 end

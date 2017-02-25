@@ -1,4 +1,17 @@
 <div class="tab-pane fade" id="specials">
   <h2>Specials!</h2>
-  <p>Specials will go here</p>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <% @specials.each do |special| %>
+      <div class="col-sm-4 col-lg-3">
+        <div class="special">
+          <h3 class="headline"><%= special.headline %></h3>
+          <p><%= special.offer %></p>
+          <p>Expires: <%= special.expires %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>

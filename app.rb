@@ -21,7 +21,9 @@ class MyApp < Sinatra::Base
   end
 
   get '/' do
+    today = Date.today
     @testimonial = Testimonial.order("RANDOM()").first
+    @specials = Special.where("expires >= ?", today)
     erb :index
   end
   

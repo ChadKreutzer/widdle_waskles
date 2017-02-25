@@ -12,7 +12,7 @@ body {
   background-color: #faf0e8;
 }
 
-.jumbotron {
+.jumbotron, .special {
   background-color: #ff9744;
 }
 
@@ -135,6 +135,21 @@ a {
 
 #locationTab {
   height: 600px;
+}
+
+.special {
+  padding: 0px 4px 0px 4px;
+  margin: 2.5px;
+  box-shadow: 2px 2px 5px #544a42;
+}
+
+.headline {
+  border: 1px solid #544a42;
+  padding: 1px;
+  display: table;
+  background-color: #77D0CD;
+  box-shadow: 2px 2px 5px #544a42;
+  transform: rotate(-5deg);
 }
 
 .item {
