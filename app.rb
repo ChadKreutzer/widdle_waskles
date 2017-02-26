@@ -91,4 +91,59 @@ class MyApp < Sinatra::Base
     redirect '/specials'
   end
   
+  # Photos Database CRUD
+  post '/photos/new' do
+    @photo = Photo.create(before_filename: params[:before_filename][:filename],
+                          after_filename: params[:after_filename][:filename],
+                          caption: params[:caption]
+                          )
+    file_action(:before_filename)
+    file_action(:after_filename)
+    
+    redirect '/photos'
+  end
+  
+  get '/photos' do
+    @photos = Photo.all
+    erb :'photos/index', :layout => false
+  end
+  
+  get "/photos/:id" do
+    @photo = Photo.find(params[:id])
+    erb :'photos/post_page', :layout => false
+  end
+  
+  put '/photos/:id' do
+    @photo = Photo.find(params[:id])
+    file_action(@photo.before_filename)
+    file_action(@photo.after_filename)
+    @photo.update(before_filename: params[:before_filename][:filename],
+                  after_filename: params[:after_filename][:filename],
+                  caption: params[:caption]
+                  )
+    @photo.save
+    file_action(:before_filename)
+    file_action(:after_filename)
+    redirect '/photos/' + params[:id]
+  end
+  
+  delete '/photos/:id/delete' do
+    @photo = Photo.find(params[:id])
+    file_action(@photo.before_filename)
+    file_action(@photo.after_filename)
+    @photo.destroy
+    redirect '/photos'
+  end
+  
+  def file_action(name)
+    if name.is_a? Symbol
+      @filename = params[name][:filename]
+      file = params[name][:tempfile]
+      File.open("./public/images/photos/#{@filename}", 'wb') do |f|
+        f.write(file.read)
+      end
+    elsif name.is_a? String
+      File.delete("./public/images/photos/#{name}")
+    end
+  end
 end

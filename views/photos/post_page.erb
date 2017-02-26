@@ -5,8 +5,8 @@
 </head>
 <body>
 <div class="container">
-    <img src="images/photos/<%= @photo.before_filename %>">
-    <img src="images/photos/<%= @photo.after_filename %>">
+    <img src="../images/photos/<%= @photo.before_filename %>">
+    <img src="../images/photos/<%= @photo.after_filename %>">
     <p>Caption: <%= @photo.caption %></p>
     
     <form method="post" action="/photos/<%= @photo.id %>/delete">
@@ -15,7 +15,7 @@
     </form>
     
     <h2>Edit Post</h2>
-    <form method="post" action="/photos/<%= @photo.id %>"> 
+    <form method="post" action="/photos/<%= @photo.id %>" enctype="multipart/form-data"> 
         <input type="hidden" name="_method" value="put">
         <label for="before_filename">Before:</label><br>
         <input type="file" name="before_filename"><br>
