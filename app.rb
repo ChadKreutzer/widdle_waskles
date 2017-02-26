@@ -115,15 +115,20 @@ class MyApp < Sinatra::Base
   
   put '/photos/:id' do
     @photo = Photo.find(params[:id])
-    file_action(@photo.before_filename)
-    file_action(@photo.after_filename)
-    @photo.update(before_filename: params[:before_filename][:filename],
-                  after_filename: params[:after_filename][:filename],
-                  caption: params[:caption]
-                  )
+    unless params[:before_filename].blank?
+      file_action(@photo.before_filename)
+      @photo.update(before_filename: params[:before_filename][:filename])
+      file_action(:before_filename)
+    end
+    unless params[:after_filename].blank?
+      file_action(@photo.after_filename)
+      @photo.update(after_filename: params[:after_filename][:filename])
+      file_action(:after_filename)
+    end
+    
+    @photo.update(caption: params[:caption])
     @photo.save
-    file_action(:before_filename)
-    file_action(:after_filename)
+    
     redirect '/photos/' + params[:id]
   end
   
