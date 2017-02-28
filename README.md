@@ -12,3 +12,4 @@ Website for Jenna's dog grooming business
   * ~~Implement Date input for Firefox~~
 * Password protect CMS
 * Implement Mail
+* Change server to puma for deployment
