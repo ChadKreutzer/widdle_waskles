@@ -1,4 +1,20 @@
 <div class="tab-pane fade" id="pictures">
+  <div class="container-fluid">
   <h2>Pictures</h2>
-  <p>Before and After pictures will go here</p>
+
+  <% @photos.each do |photo| %>
+  <div class="row">
+    <h3 class="col-sm-12 col-md-10 col-md-offset-1"><%= photo.caption %></h3>
+  </div>
+  <div class="row center-block">
+    <div class="col-sm-6 col-md-5 col-md-offset-1">
+      <img class="img-responsive img-rounded" src="images/photos/<%= photo.before_filename %>">
+    </div>
+    <div class="col-sm-6 col-md-5">
+      <img class="img-responsive img-rounded" src="images/photos/<%= photo.after_filename %>">
+    </div>
+  </div>
+
+  <% end %>
+</div>
 </div>
