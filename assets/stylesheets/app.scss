@@ -6,6 +6,7 @@
 *= require testimonials
 *= require about
 *= require services
+*= require pictures
 *= require location
 *= require specials
 */
@@ -37,7 +38,7 @@ body {
   list-style-image: url('/images/paw_print.png');
 }
 
-.logo, .subtitle, .navbar-brand, h2, h3 {
+.logo, .subtitle, .navbar-brand, h2, h3, h4 {
   font-family: "Crafty Girls";
 }
 

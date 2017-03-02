@@ -4,14 +4,16 @@
 
   <% @photos.each do |photo| %>
   <div class="row">
-    <h3 class="col-sm-12 col-md-10 col-md-offset-1"><%= photo.caption %></h3>
+    <h3 class="caption col-sm-12 col-md-10 col-md-offset-1"><%= photo.caption %></h3>
   </div>
   <div class="row center-block">
     <div class="col-sm-6 col-md-5 col-md-offset-1">
       <img class="img-responsive img-rounded" src="images/photos/<%= photo.before_filename %>">
+      <h4 class="before">BEFORE</h4>
     </div>
     <div class="col-sm-6 col-md-5">
       <img class="img-responsive img-rounded" src="images/photos/<%= photo.after_filename %>">
+      <h4 class="after">AFTER</h4>
     </div>
   </div>
 
