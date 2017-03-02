@@ -1,0 +1,27 @@
+#testimony {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: hidden;
+  margin-top: 5px;
+  padding: 5px;
+  border: 5px;
+  background-color: #77D0CD;
+  box-shadow: 2px 2px 5px #544a42;
+  z-index: 10;
+}
+
+#testimonyTitle {
+  color: #ff9744;
+  text-shadow: 2px 2px 4px #544a42;
+}
+
+.splash {
+  opacity: .90;
+  visibility: visible;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

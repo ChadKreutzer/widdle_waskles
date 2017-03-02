@@ -1,0 +1,45 @@
+@media screen and (max-width: 394px) {
+  .logo {
+    font-size: 3.75em;
+  }
+  .subtitle {
+    font-size: 1.75em;
+  }
+  .tab-pane {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #navTabs li, .jumbotron {
+    visibility: hidden;
+    height: 60px;
+  }
+  #testimony {
+    height: 75%;
+  }
+}
+
+@media (min-width: 661px) {
+  .navbar {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #logopic {
+    max-height: 300px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 920px) {
+  .logo {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1148px) {
+  .logo {
+    font-size: 3.75em;
+  }
+}
