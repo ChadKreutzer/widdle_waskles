@@ -1,0 +1,16 @@
+.before {
+  background-color: #ff9744;
+}
+
+.after {
+  background-color: #77D0CD;
+}
+
+h4 {
+  float: right;
+  border: 1px solid #544a42;
+  display: table;
+  padding: 5px;
+  box-shadow: 2px 2px 5px #544a42;
+  transform: scale(1.75, 1.75) rotate(-5deg) translate(0, -30px);
+}

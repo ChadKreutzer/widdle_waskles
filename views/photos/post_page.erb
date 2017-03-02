@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../assets/app.css">
+</head>
+<body>
+<div class="container block-center">
+  <hr>
+  <div class="row">
+    <div class="col-sm-6 col-md-5 col-md-offset-1">
+      <h3>Before:</h3>
+      <img class="img-responsive img-rounded" src="../images/photos/<%= @photo.before_filename %>">
+    </div>
+    <div class="col-sm-6 col-md-5">
+      <h3>After:</h3>
+      <img class="img-responsive img-rounded" src="../images/photos/<%= @photo.after_filename %>">
+    </div>
+  </div>
+  <div class="row">
+    <p class="col-sm-12 col-md-10 col-md-offset-1">Caption: <%= @photo.caption %></p>
+  </div>
+  <hr>
+
+    <form method="post" action="/photos/<%= @photo.id %>/delete">
+        <input type="hidden" name="_method" value="delete">
+        <button type="submit">Delete Post</button>
+    </form>
+
+    <h2>Edit Post</h2>
+    <form method="post" action="/photos/<%= @photo.id %>" enctype="multipart/form-data">
+        <input type="hidden" name="_method" value="put">
+        <label for="before_filename">Before:</label><br>
+        <input type="file" name="before_filename"><br>
+        <label for="after_filename">After:</label><br>
+        <input type="file" name="after_filename"><br>
+        <label for="caption">Caption:</label><br>
+        <input type="text" name="caption" value="<%= @photo.caption %>">
+        <button type="submit">Update Post</button>
+    </form>
+
+    <a href="/photos">Back to List</a>
+</div>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>
