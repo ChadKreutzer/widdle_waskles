@@ -14,3 +14,4 @@ Website for Jenna's dog grooming business
 * Implement Mail
 * Password protect CMS
 * Change server to puma for deployment
+* Fix testimonial splash on mobile
