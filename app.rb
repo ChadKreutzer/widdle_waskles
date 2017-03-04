@@ -29,7 +29,7 @@ class MyApp < Sinatra::Base
   end
   
   get '/jenna' do
-    erb :jenna, :layout => false
+    erb :jenna, :layout => :cms_layout
   end
   
   # Testimonials Database CRUD
@@ -40,12 +40,12 @@ class MyApp < Sinatra::Base
 
   get '/testimonials' do
     @testimonials = Testimonial.all
-    erb :'testimonials/index', :layout => false
+    erb :'testimonials/index', :layout => :cms_layout
   end
 
   get "/testimonials/:id" do
     @testimonial = Testimonial.find(params[:id])
-    erb :'testimonials/post_page', :layout => false
+    erb :'testimonials/post_page', :layout => :cms_layout
   end
 
   put '/testimonials/:id' do
@@ -72,12 +72,12 @@ class MyApp < Sinatra::Base
 
   get '/specials' do
     @specials = Special.all
-    erb :'specials/index', :layout => false
+    erb :'specials/index', :layout => :cms_layout
   end
 
   get "/specials/:id" do
     @special = Special.find(params[:id])
-    erb :'specials/post_page', :layout => false
+    erb :'specials/post_page', :layout => :cms_layout
   end
 
   put '/specials/:id' do
@@ -110,12 +110,12 @@ class MyApp < Sinatra::Base
 
   get '/photos' do
     @photos = Photo.all
-    erb :'photos/index', :layout => false
+    erb :'photos/index', :layout => :cms_layout
   end
 
   get "/photos/:id" do
     @photo = Photo.find(params[:id])
-    erb :'photos/post_page', :layout => false
+    erb :'photos/post_page', :layout => :cms_layout
   end
 
   put '/photos/:id' do
