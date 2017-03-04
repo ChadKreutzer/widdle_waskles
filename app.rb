@@ -27,7 +27,11 @@ class MyApp < Sinatra::Base
     @specials = Special.where("expires >= ?", today)
     erb :index
   end
-
+  
+  get '/jenna' do
+    erb :jenna, :layout => false
+  end
+  
   # Testimonials Database CRUD
   post '/testimonials/new' do
     @testimonial = Testimonial.create(story: params[:story], name: params[:name])
