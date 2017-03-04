@@ -18,7 +18,7 @@ Website for Jenna's dog grooming business
 * Implement Mail
 * Password protect CMS
 * ~~Add Dashboard page~~
-* DRY out CMS pages (mini layout?)
+* ~~DRY out CMS pages (mini layout?)~~ _(Mostly good)_
 * Change server to puma for deployment
 * ~~Fix testimonial splash on mobile~~
 * ~~Fix horizontal scroll~~
