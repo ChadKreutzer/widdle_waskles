@@ -15,4 +15,4 @@ Website for Jenna's dog grooming business
 * Password protect CMS
 * Change server to puma for deployment
 * Fix testimonial splash on mobile
-* Fix horizontal scroll
+* ~~Fix horizontal scroll~~
