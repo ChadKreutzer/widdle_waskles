@@ -1,0 +1,25 @@
+<h2>All Services</h2>
+<hr>
+<div class="container">
+  <ul>
+    <% @services.each do |service| %>
+      <li>
+        <a href="/services/<%= service.id %>"><%= service.task %> </a>
+      </li>
+    <% end %>
+  </ul>
+  <hr>
+  <h2>Add Specials</h2>
+  <hr>
+  
+  <form method="post" action="/services/new">
+    <label for="task">Service:</label><br>
+    <input type="text" name="task"><br>
+    <label for="species">Species:</label><br>
+    <input type="text" name="species"><br>
+    <label for="price">Price:</label><br>
+    <input type="number" name="price">
+    <button type ="submit">Add Service</button>
+  </form>
+</div>
+<a href="/jenna">Back to Dashboard</a>
