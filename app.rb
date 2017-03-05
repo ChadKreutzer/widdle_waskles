@@ -28,6 +28,7 @@ class MyApp < Sinatra::Base
     erb :index
   end
   
+  # CMS Dashboard
   get '/jenna' do
     erb :jenna, :layout => :cms_layout
   end
