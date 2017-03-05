@@ -10,12 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170225130723) do
+ActiveRecord::Schema.define(version: 20170305133639) do
 
   create_table "photos", force: :cascade do |t|
     t.string "before_filename"
     t.string "after_filename"
     t.string "caption"
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string  "task"
+    t.string  "species"
+    t.decimal "price"
   end
 
   create_table "specials", force: :cascade do |t|
