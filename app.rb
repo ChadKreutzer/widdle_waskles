@@ -96,6 +96,41 @@ class MyApp < Sinatra::Base
     @special.destroy
     redirect '/specials'
   end
+  
+  # Services Database CRUD
+  post '/services/new' do
+    @service = Service.create(task: params[:task],
+                              species: params[:species],
+                              price: params[:price]
+                              )
+    redirect '/services'
+  end
+
+  get '/services' do
+    @services = Service.all
+    erb :'services/index', :layout => :cms_layout
+  end
+
+  get "/services/:id" do
+    @service = Service.find(params[:id])
+    erb :'services/post_page', :layout => :cms_layout
+  end
+
+  put '/services/:id' do
+    @service = Service.find(params[:id])
+    @service.update(task: params[:task],
+                    species: params[:species],
+                    price: params[:price]
+                    )
+    @service.save
+    redirect '/services/' + params[:id]
+  end
+
+  delete '/services/:id/delete' do
+    @service = Service.find(params[:id])
+    @service.destroy
+    redirect '/services'
+  end
 
   # Photos Database CRUD
   post '/photos/new' do
