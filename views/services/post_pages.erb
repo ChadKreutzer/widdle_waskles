@@ -1,0 +1,24 @@
+<div class="container">
+    <h2><%= @service.task %></h2>
+    <p>For: <%= @service.species %></p>
+    <p>Price: <%= @service.price %></p>
+
+    <form method="post" action="/services/<%= @service.id %>/delete">
+        <input type="hidden" name="_method" value="delete">
+        <button type="submit">Delete Post</button>
+    </form>
+
+    <h2>Edit Post</h2>
+    <form method="post" action="/services/<%= @service.id %>">
+        <input type="hidden" name="_method" value="put">
+        <label for="task">Service:</label><br>
+        <input type="text" name="task" value="<%= @service.task %>"><br>
+        <label for="species">Species:</label><br>
+        <input type="text" name="species" value="<%= @service.species %>"><br>
+        <label for="price">Price:</label><br>
+        <input class="number" name="price" value="<%= @service.price %>">
+        <button type="submit">Update Post</button>
+    </form>
+
+    <a href="/services">Back to List</a>
+</div>
