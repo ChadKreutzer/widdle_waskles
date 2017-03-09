@@ -1,28 +1,30 @@
 <div class="tab-pane fade" id="services">
     <h2>Services</h2>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6">
+        <div class="row center-block">
+            <div class="col-sm-8">
                 <p>We offer many services for both dogs and cats.</p>
                 <p>If no price is listed, call for an estimate</p>
-                <table class="center-block">
-                    <tr>
-                        <th>Service</th>
-                        <th>Type of Pet</th>
-                        <th>Price</th>
-                    </tr>
-                    <% @services.each do |service| %>
-                    <tr>
-                        <td><%= service.task %></td>
-                        <td><%= service.species %></td>
-                        <td>
-                            <%= '$%.2f' % service.price unless service.price.blank? %>
-                        </td>
-                    </tr>
-                    <% end %>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-hover">
+                        <tr>
+                            <th>Service</th>
+                            <th>Type of Pet</th>
+                            <th>Price</th>
+                        </tr>
+                        <% @services.each do |service| %>
+                        <tr>
+                            <td><%= service.task %></td>
+                            <td><%= service.species %></td>
+                            <td>
+                                <%= '$%.2f' % service.price unless service.price.blank? %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </table>
+                </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <img id="jenna" src="images/jenna.jpg" class="img-responsive">
             </div>
         </div>

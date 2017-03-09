@@ -1,5 +1,5 @@
-#jenna {
-  padding: 5px;
-  max-width: 50%;
-  float: right;
+@-moz-document url-prefix() {
+    fieldset {
+        display: table-cell;
+    }
 }
