@@ -13,7 +13,8 @@ Website for Jenna's dog grooming business
     * ~~Implement Date input for Firefox~~
   * ~~Implement view~~
 * Implement Services
-  * Implement back end
+  * ~~Implement back end~~
+    * Low priority: make species choice a drop down or maybe radio buttons
   * Implement view
 * Implement Mail
 * Password protect CMS
