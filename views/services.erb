@@ -1,5 +1,30 @@
 <div class="tab-pane fade" id="services">
     <h2>Services</h2>
-    <img id="jenna" src="images/jenna.jpg" class="img-responsive pull-right">
-    <p>We offer many services for both dogs and cats.</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>We offer many services for both dogs and cats.</p>
+                <p>If no price is listed, call for an estimate</p>
+                <table class="center-block">
+                    <tr>
+                        <th>Service</th>
+                        <th>Type of Pet</th>
+                        <th>Price</th>
+                    </tr>
+                    <% @services.each do |service| %>
+                    <tr>
+                        <td><%= service.task %></td>
+                        <td><%= service.species %></td>
+                        <td>
+                            <%= '$%.2f' % service.price unless service.price.blank? %>
+                        </td>
+                    </tr>
+                    <% end %>
+                </table>
+            </div>
+            <div class="col-sm-6">
+                <img id="jenna" src="images/jenna.jpg" class="img-responsive">
+            </div>
+        </div>
+    </div>
 </div>
