@@ -1,7 +1,7 @@
 <div class="container">
     <h2><%= @service.task %></h2>
     <p>For: <%= @service.species %></p>
-    <p>Price: <%= @service.price %></p>
+    <p>Price: <%= '$%.2f' % @service.price unless @service.price.blank? %></p>
 
     <form method="post" action="/services/<%= @service.id %>/delete">
         <input type="hidden" name="_method" value="delete">
@@ -16,7 +16,8 @@
         <label for="species">Species:</label><br>
         <input type="text" name="species" value="<%= @service.species %>"><br>
         <label for="price">Price:</label><br>
-        <input class="number" name="price" value="<%= @service.price %>">
+        <input class="number" name="price" step="0.01"
+            value="<%= @service.price %>">
         <button type="submit">Update Post</button>
     </form>
 

@@ -25,6 +25,7 @@ class MyApp < Sinatra::Base
     @photos = Photo.all
     @testimonial = Testimonial.order("RANDOM()").first
     @specials = Special.where("expires >= ?", today)
+    @services = Service.all
     erb :index
   end
   

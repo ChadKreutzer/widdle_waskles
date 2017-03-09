@@ -9,7 +9,7 @@
     <% end %>
   </ul>
   <hr>
-  <h2>Add Specials</h2>
+  <h2>Add Service</h2>
   <hr>
   
   <form method="post" action="/services/new">
@@ -18,7 +18,7 @@
     <label for="species">Species:</label><br>
     <input type="text" name="species"><br>
     <label for="price">Price:</label><br>
-    <input type="number" name="price">
+    <input type="number" step="0.01" name="price">
     <button type ="submit">Add Service</button>
   </form>
 </div>
