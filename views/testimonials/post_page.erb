@@ -1,15 +1,15 @@
-<a class="btn btn-primary" href="/testimonials">Back to List</a>
+<a class="btn btn-primary" href="/jenna/testimonials">Back to List</a>
 <div class="container">
     <h2><%= @testimonial.name %></h2>
     <p><%= @testimonial.story %></p>
     
-    <form method="post" action="/testimonials/<%= @testimonial.id %>/delete">
+    <form method="post" action="/jenna/testimonials/<%= @testimonial.id %>/delete">
         <input type="hidden" name="_method" value="delete">
         <button type="submit">Delete Post</button>
     </form>
     
     <h2>Edit Post</h2>
-    <form method="post" action="/testimonials/<%= @testimonial.id %>"> 
+    <form method="post" action="/jenna/testimonials/<%= @testimonial.id %>"> 
         <input type="hidden" name="_method" value="put">
         <input type="text" name="story" value="<%= @testimonial.story %>">
         <input type="text" name="name" value="<%= @testimonial.name %>">

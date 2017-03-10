@@ -6,7 +6,7 @@
   <ul class="nav nav-pills nav-stacked">
     <% @services.each do |service| %>
       <li>
-        <a class="btn-success" href="/services/<%= service.id %>">
+        <a class="btn-success" href="/jenna/services/<%= service.id %>">
           <%= service.task %>, for
           <%= service.species %>
           <%= ': costs $%.2f' % service.price unless service.price.blank? %>.
@@ -18,7 +18,7 @@
   <h2>Add Service</h2>
   <hr>
   
-  <form method="post" action="/services/new">
+  <form method="post" action="/jenna/services/new">
     <label for="task">Service:</label><br>
     <input type="text" name="task"><br>
     <label for="species">Species:</label><br>

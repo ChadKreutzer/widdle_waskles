@@ -6,7 +6,7 @@
   <ul class="nav nav-pills nav-stacked">
     <% @photos.each do |photo| %>
       <li>
-        <a class="btn-success" href="/photos/<%= photo.id %>"><%= photo.caption %></a>
+        <a class="btn-success" href="/jenna/photos/<%= photo.id %>"><%= photo.caption %></a>
       </li>
     <% end %>
   </ul>
@@ -18,7 +18,7 @@
     look much better if you make sure each set of before and after photos you 
     upload are the same size before uploading.
   </p>
-  <form method="post" action="/photos/new" enctype="multipart/form-data">
+  <form method="post" action="/jenna/photos/new" enctype="multipart/form-data">
     <label for="before_filename">Before:</label><br>
     <input type="file" name="before_filename"><br>
     <label for="after_filename">After:</label><br>

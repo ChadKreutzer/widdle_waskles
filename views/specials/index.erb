@@ -6,7 +6,7 @@
   <ul class="nav nav-pills nav-stacked">
     <% @specials.each do |special| %>
       <li>
-        <a class="btn-success" href="/specials/<%= special.id %>"><%= special.headline %> </a>
+        <a class="btn-success" href="/jenna/specials/<%= special.id %>"><%= special.headline %> </a>
         <p>Expires: <%= special.expires.strftime("%m/%d/%y") %></p>
       </li>
     <% end %>
@@ -20,7 +20,7 @@
     don't have to remember to remove them when they expire and so you can re-
     use specials by changing the expiration date.
   </p>
-  <form method="post" action="/specials/new">
+  <form method="post" action="/jenna/specials/new">
     <label for="headline">Headline:</label><br>
     <input type="text" name="headline"><br>
     <label for="offer">Offer:</label><br>

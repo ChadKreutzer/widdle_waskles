@@ -35,106 +35,106 @@ class MyApp < Sinatra::Base
   end
   
   # Testimonials Database CRUD
-  post '/testimonials/new' do
+  post '/jenna/testimonials/new' do
     @testimonial = Testimonial.create(story: params[:story], name: params[:name])
-    redirect '/testimonials'
+    redirect '/jenna/testimonials'
   end
 
-  get '/testimonials' do
+  get '/jenna/testimonials' do
     @testimonials = Testimonial.all
     erb :'testimonials/index', :layout => :cms_layout
   end
 
-  get "/testimonials/:id" do
+  get "/jenna/testimonials/:id" do
     @testimonial = Testimonial.find(params[:id])
     erb :'testimonials/post_page', :layout => :cms_layout
   end
 
-  put '/testimonials/:id' do
+  put '/jenna/testimonials/:id' do
     @testimonial = Testimonial.find(params[:id])
     @testimonial.update(story: params[:story], name: params[:name])
     @testimonial.save
-    redirect '/testimonials/' + params[:id]
+    redirect '/jenna/testimonials/' + params[:id]
   end
 
-  delete '/testimonials/:id/delete' do
+  delete '/jenna/testimonials/:id/delete' do
     @testimonial = Testimonial.find(params[:id])
     @testimonial.destroy
-    redirect '/testimonials'
+    redirect '/jenna/testimonials'
   end
 
   # Specials Database CRUD
-  post '/specials/new' do
+  post '/jenna/specials/new' do
     @special = Special.create(headline: params[:headline],
                               offer: params[:offer],
                               expires: params[:expires]
                               )
-    redirect '/specials'
+    redirect '/jenna/specials'
   end
 
-  get '/specials' do
+  get '/jenna/specials' do
     @specials = Special.all
     erb :'specials/index', :layout => :cms_layout
   end
 
-  get "/specials/:id" do
+  get "/jenna/specials/:id" do
     @special = Special.find(params[:id])
     erb :'specials/post_page', :layout => :cms_layout
   end
 
-  put '/specials/:id' do
+  put '/jenna/specials/:id' do
     @special = Special.find(params[:id])
     @special.update(headline: params[:headline],
                     offer: params[:offer],
                     expires: params[:expires]
                     )
     @special.save
-    redirect '/specials/' + params[:id]
+    redirect '/jenna/specials/' + params[:id]
   end
 
-  delete '/specials/:id/delete' do
+  delete '/jenna/specials/:id/delete' do
     @special = Special.find(params[:id])
     @special.destroy
-    redirect '/specials'
+    redirect '/jenna/specials'
   end
   
   # Services Database CRUD
-  post '/services/new' do
+  post '/jenna/services/new' do
     @service = Service.create(task: params[:task],
                               species: params[:species],
                               price: params[:price]
                               )
-    redirect '/services'
+    redirect '/jenna/services'
   end
 
-  get '/services' do
+  get '/jenna/services' do
     @services = Service.all
     erb :'services/index', :layout => :cms_layout
   end
 
-  get "/services/:id" do
+  get "/jenna/services/:id" do
     @service = Service.find(params[:id])
     erb :'services/post_page', :layout => :cms_layout
   end
 
-  put '/services/:id' do
+  put '/jenna/services/:id' do
     @service = Service.find(params[:id])
     @service.update(task: params[:task],
                     species: params[:species],
                     price: params[:price]
                     )
     @service.save
-    redirect '/services/' + params[:id]
+    redirect '/jenna/services/' + params[:id]
   end
 
-  delete '/services/:id/delete' do
+  delete '/jenna/services/:id/delete' do
     @service = Service.find(params[:id])
     @service.destroy
-    redirect '/services'
+    redirect '/jenna/services'
   end
 
   # Photos Database CRUD
-  post '/photos/new' do
+  post '/jenna/photos/new' do
     @photo = Photo.create(before_filename: params[:before_filename][:filename],
                           after_filename: params[:after_filename][:filename],
                           caption: params[:caption]
@@ -142,20 +142,20 @@ class MyApp < Sinatra::Base
     file_action(:before_filename)
     file_action(:after_filename)
 
-    redirect '/photos'
+    redirect '/jenna/photos'
   end
 
-  get '/photos' do
+  get '/jenna/photos' do
     @photos = Photo.all
     erb :'photos/index', :layout => :cms_layout
   end
 
-  get "/photos/:id" do
+  get "/jenna/photos/:id" do
     @photo = Photo.find(params[:id])
     erb :'photos/post_page', :layout => :cms_layout
   end
 
-  put '/photos/:id' do
+  put '/jenna/photos/:id' do
     @photo = Photo.find(params[:id])
     unless params[:before_filename].blank?
       file_action(@photo.before_filename)
@@ -171,15 +171,15 @@ class MyApp < Sinatra::Base
     @photo.update(caption: params[:caption])
     @photo.save
 
-    redirect '/photos/' + params[:id]
+    redirect '/jenna/photos/' + params[:id]
   end
 
-  delete '/photos/:id/delete' do
+  delete '/jenna/photos/:id/delete' do
     @photo = Photo.find(params[:id])
     file_action(@photo.before_filename)
     file_action(@photo.after_filename)
     @photo.destroy
-    redirect '/photos'
+    redirect '/jenna/photos'
   end
 
   def file_action(name)

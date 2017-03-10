@@ -1,16 +1,16 @@
-<a class="btn btn-primary" href="/specials">Back to List</a>
+<a class="btn btn-primary" href="/jenna/specials">Back to List</a>
 <div class="container">
     <h2><%= @special.headline %></h2>
     <p><%= @special.offer %></p>
     <p>Expires: <%= @special.expires.strftime("%m/%d/%y") %></p>
     
-    <form method="post" action="/specials/<%= @special.id %>/delete">
+    <form method="post" action="/jenna/specials/<%= @special.id %>/delete">
         <input type="hidden" name="_method" value="delete">
         <button type="submit">Delete Post</button>
     </form>
     
     <h2>Edit Post</h2>
-    <form method="post" action="/specials/<%= @special.id %>"> 
+    <form method="post" action="/jenna/specials/<%= @special.id %>"> 
         <input type="hidden" name="_method" value="put">
         <label for="headline">Headline:</label><br>
         <input type="text" name="headline" value="<%= @special.headline %>"><br>

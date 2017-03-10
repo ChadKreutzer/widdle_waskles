@@ -6,7 +6,7 @@
   <ul class="nav nav-pills nav-stacked">
     <% @testimonials.each do |testimonial| %>
       <li>
-        <a class="btn-success" href="/testimonials/<%= testimonial.id %>"><%= testimonial.name %></a>
+        <a class="btn-success" href="/jenna/testimonials/<%= testimonial.id %>"><%= testimonial.name %></a>
       </li>
     <% end %>
   </ul>
@@ -17,7 +17,7 @@
     The site will display a random Review from this database in the splash that
     appears when you first load the site.
   </p>
-  <form method="post" action="/testimonials/new">
+  <form method="post" action="/jenna/testimonials/new">
     <label for="story">Testimonial:</label>
     <input type="text" name="story">
     <label for="Name">Name: </label>
