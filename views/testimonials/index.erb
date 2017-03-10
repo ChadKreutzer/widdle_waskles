@@ -1,10 +1,11 @@
 <h2>All Testimonials</h2>
 <hr>
 <div class="container">
-  <ul>
+  <h3>Click Name to edit Customer Review</h3>
+  <ul class="nav nav-pills nav-stacked">
     <% @testimonials.each do |testimonial| %>
       <li>
-        <a href="/testimonials/<%= testimonial.id %>"><%= testimonial.name %></a>
+        <a class="btn-success" href="/testimonials/<%= testimonial.id %>"><%= testimonial.name %></a>
       </li>
     <% end %>
   </ul>

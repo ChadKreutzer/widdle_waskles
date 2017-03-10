@@ -1,10 +1,15 @@
 <h2>All Services</h2>
 <hr>
 <div class="container">
-  <ul>
+  <h3>Click Offered Service to edit details</h3>
+  <ul class="nav nav-pills nav-stacked">
     <% @services.each do |service| %>
       <li>
-        <a href="/services/<%= service.id %>"><%= service.task %> </a>
+        <a class="btn-success" href="/services/<%= service.id %>">
+          <%= service.task %>, for
+          <%= service.species %>
+          <%= ': costs $%.2f' % service.price unless service.price.blank? %>.
+        </a>
       </li>
     <% end %>
   </ul>

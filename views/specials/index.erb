@@ -1,10 +1,11 @@
 <h2>All Specials</h2>
 <hr>
 <div class="container">
-  <ul>
+  <h3>Click Headline to edit Special</h3>
+  <ul class="nav nav-pills nav-stacked">
     <% @specials.each do |special| %>
       <li>
-        <a href="/specials/<%= special.id %>"><%= special.headline %> </a>
+        <a class="btn-success" href="/specials/<%= special.id %>"><%= special.headline %> </a>
         <p>Expires: <%= special.expires.strftime("%m/%d/%y") %></p>
       </li>
     <% end %>

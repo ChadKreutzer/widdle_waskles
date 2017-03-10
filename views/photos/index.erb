@@ -1,10 +1,11 @@
 <h2>All Photos</h2>
 <hr>
 <div class="container">
-  <ul>
+  <h3>Click Caption to edit Before and After Photo</h3>
+  <ul class="nav nav-pills nav-stacked">
     <% @photos.each do |photo| %>
       <li>
-        <a href="/photos/<%= photo.id %>"><%= photo.caption %></a>
+        <a class="btn-success" href="/photos/<%= photo.id %>"><%= photo.caption %></a>
       </li>
     <% end %>
   </ul>
