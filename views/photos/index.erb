@@ -1,4 +1,5 @@
 <h2>All Photos</h2>
+<a class="btn btn-primary" href="/jenna">Back to Dashboard</a>
 <hr>
 <div class="container">
   <h3>Click Caption to edit Before and After Photo</h3>
@@ -12,7 +13,11 @@
   <hr>
   <h2>Add Photos</h2>
   <hr>
-  
+  <p>
+    Although the site won't prevent you from not doing so if you want, it will 
+    look much better if you make sure each set of before and after photos you 
+    upload are the same size before uploading.
+  </p>
   <form method="post" action="/photos/new" enctype="multipart/form-data">
     <label for="before_filename">Before:</label><br>
     <input type="file" name="before_filename"><br>
@@ -23,4 +28,4 @@
     <button type ="submit">Add Photo</button>
   </form>
 </div>
-<a href="/jenna">Back to Dashboard</a>
+

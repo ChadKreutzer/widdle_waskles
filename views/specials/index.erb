@@ -1,4 +1,5 @@
 <h2>All Specials</h2>
+<a class="btn btn-primary" href="/jenna">Back to Dashboard</a>
 <hr>
 <div class="container">
   <h3>Click Headline to edit Special</h3>
@@ -13,7 +14,12 @@
   <hr>
   <h2>Add Specials</h2>
   <hr>
-  
+  <p>
+    Although the site will not delete any special you create unless you do so 
+    yourself, it will automatically hide any specials that have expired so you
+    don't have to remember to remove them when they expire and so you can re-
+    use specials by changing the expiration date.
+  </p>
   <form method="post" action="/specials/new">
     <label for="headline">Headline:</label><br>
     <input type="text" name="headline"><br>
@@ -24,4 +30,4 @@
     <button type ="submit">Add Special</button>
   </form>
 </div>
-<a href="/jenna">Back to Dashboard</a>
+
