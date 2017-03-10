@@ -18,7 +18,7 @@ Website for Jenna's dog grooming business
   * ~~Implement view~~
 * Implement Mail
 * Password protect CMS
-* change CMS routes to be tree rooted at /jenna
+* ~~change CMS routes to be tree rooted at /jenna/~~
 * ~~Make CMS more intuitive to use~~
 * ~~Add Dashboard page~~
 * ~~DRY out CMS pages (mini layout?)~~ _(Mostly good)_
