@@ -2,16 +2,7 @@
 <a class="btn btn-primary" href="/jenna">Back to Dashboard</a>
 <hr>
 <div class="container">
-  <h3>Click Caption to edit Before and After Photo</h3>
-  <ul class="nav nav-pills nav-stacked">
-    <% @photos.each do |photo| %>
-      <li>
-        <a class="btn-success" href="/jenna/photos/<%= photo.id %>"><%= photo.caption %></a>
-      </li>
-    <% end %>
-  </ul>
-  <hr>
-  <h2>Add Photos</h2>
+  <h3>Add Photos</h3>
   <hr>
   <p>
     Although the site won't prevent you from not doing so if you want, it will 
@@ -27,5 +18,15 @@
     <input type="text" name="caption">
     <button type ="submit">Add Photo</button>
   </form>
+  <hr>
+  <h3>Click Caption to edit Before and After Photo</h3>
+  <ul class="nav nav-pills nav-stacked">
+    <% @photos.each do |photo| %>
+      <li>
+        <a class="btn-success" href="/jenna/photos/<%= photo.id %>"><%= photo.caption %></a>
+      </li>
+    <% end %>
+  </ul>
+  <hr>
 </div>
 

@@ -17,7 +17,7 @@
                             <td><%= service.task %></td>
                             <td><%= service.species %></td>
                             <td>
-                                <%= '$%.2f' % service.price unless service.price.blank? %>
+                                <%= service.price.blank? ? 'Estimate' : '$%.2f' % service.price %>
                             </td>
                         </tr>
                         <% end %>

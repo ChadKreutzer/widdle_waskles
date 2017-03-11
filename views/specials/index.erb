@@ -2,22 +2,12 @@
 <a class="btn btn-primary" href="/jenna">Back to Dashboard</a>
 <hr>
 <div class="container">
-  <h3>Click Headline to edit Special</h3>
-  <ul class="nav nav-pills nav-stacked">
-    <% @specials.each do |special| %>
-      <li>
-        <a class="btn-success" href="/jenna/specials/<%= special.id %>"><%= special.headline %> </a>
-        <p>Expires: <%= special.expires.strftime("%m/%d/%y") %></p>
-      </li>
-    <% end %>
-  </ul>
-  <hr>
-  <h2>Add Specials</h2>
+  <h3>Add Specials</h3>
   <hr>
   <p>
     Although the site will not delete any special you create unless you do so 
     yourself, it will automatically hide any specials that have expired so you
-    don't have to remember to remove them when they expire and so you can re-
+    don't have to remember to remove them when they expire and you can re-
     use specials by changing the expiration date.
   </p>
   <form method="post" action="/jenna/specials/new">
@@ -29,5 +19,17 @@
     <input class="date" type="date" name="expires">
     <button type ="submit">Add Special</button>
   </form>
+  <hr>
+  <h3>Click Headline to edit Special</h3>
+  <ul class="nav nav-pills nav-stacked">
+    <% @specials.each do |special| %>
+      <li>
+        <a class="btn-success" href="/jenna/specials/<%= special.id %>"><%= special.headline %> </a>
+        <p>Expires: <%= special.expires.strftime("%m/%d/%y") %></p>
+      </li>
+    <% end %>
+  </ul>
+  <hr>
+  
 </div>
 

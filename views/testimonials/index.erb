@@ -2,16 +2,7 @@
 <a class="btn btn-primary" href="/jenna">Back to Dashboard</a>
 <hr>
 <div class="container">
-  <h3>Click Name to edit Customer Review</h3>
-  <ul class="nav nav-pills nav-stacked">
-    <% @testimonials.each do |testimonial| %>
-      <li>
-        <a class="btn-success" href="/jenna/testimonials/<%= testimonial.id %>"><%= testimonial.name %></a>
-      </li>
-    <% end %>
-  </ul>
-  <hr>
-  <h2>Add Testimonials</h2>
+  <h3>Add Testimonials</h3>
   <hr>
   <p>
     The site will display a random Review from this database in the splash that
@@ -24,5 +15,16 @@
     <input type="text" name="name">
     <input type ="submit" value="Add Testimonial">
   </form>
+  <hr>
+  <h3>Click Name to edit Customer Review</h3>
+  <ul class="nav nav-pills nav-stacked">
+    <% @testimonials.each do |testimonial| %>
+      <li>
+        <a class="btn-success" href="/jenna/testimonials/<%= testimonial.id %>"><%= testimonial.name %></a>
+      </li>
+    <% end %>
+  </ul>
+  <hr>
+  
 </div>
 

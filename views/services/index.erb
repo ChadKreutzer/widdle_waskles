@@ -2,6 +2,19 @@
 <a class="btn btn-primary" href="/jenna">Back to Dashboard</a>
 <hr>
 <div class="container">
+  <h3>Add Service</h3>
+  <hr>
+  <p>Leave Price Blank if Estimate</p>
+  <form method="post" action="/jenna/services/new">
+    <label for="task">Service:</label><br>
+    <input type="text" name="task"><br>
+    <label for="species">Species:</label><br>
+    <input type="text" name="species"><br>
+    <label for="price">Price:</label><br>
+    <input type="number" step="0.01" name="price">
+    <button type ="submit">Add Service</button>
+  </form>
+  <hr>
   <h3>Click Offered Service to edit details</h3>
   <ul class="nav nav-pills nav-stacked">
     <% @services.each do |service| %>
@@ -15,16 +28,4 @@
     <% end %>
   </ul>
   <hr>
-  <h2>Add Service</h2>
-  <hr>
-  
-  <form method="post" action="/jenna/services/new">
-    <label for="task">Service:</label><br>
-    <input type="text" name="task"><br>
-    <label for="species">Species:</label><br>
-    <input type="text" name="species"><br>
-    <label for="price">Price:</label><br>
-    <input type="number" step="0.01" name="price">
-    <button type ="submit">Add Service</button>
-  </form>
 </div>
