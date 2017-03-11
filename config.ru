@@ -4,6 +4,8 @@ Bundler.require
 Dir["./models/*"].each {|file| require file }
 require './app'
 
+use Rack::MethodOverride
+
 map '/assets/' do
   environment = Sprockets::Environment.new
   environment.js_compressor  = :uglify
