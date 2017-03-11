@@ -48,7 +48,7 @@ class Protected < Sinatra::Base
   # Testimonials Database CRUD
   post '/testimonials/new' do
     @testimonial = Testimonial.create(story: params[:story], name: params[:name])
-    redirect '/testimonials'
+    redirect '/jenna/testimonials'
   end
 
   get '/testimonials' do
@@ -65,13 +65,13 @@ class Protected < Sinatra::Base
     @testimonial = Testimonial.find(params[:id])
     @testimonial.update(story: params[:story], name: params[:name])
     @testimonial.save
-    redirect '/testimonials/' + params[:id]
+    redirect '/jenna/testimonials/' + params[:id]
   end
 
   delete '/testimonials/:id/delete' do
     @testimonial = Testimonial.find(params[:id])
     @testimonial.destroy
-    redirect '/testimonials'
+    redirect '/jenna/testimonials'
   end
 
   # Specials Database CRUD
@@ -80,7 +80,7 @@ class Protected < Sinatra::Base
                               offer: params[:offer],
                               expires: params[:expires]
                               )
-    redirect '/specials'
+    redirect '/jenna/specials'
   end
 
   get '/specials' do
@@ -100,13 +100,13 @@ class Protected < Sinatra::Base
                     expires: params[:expires]
                     )
     @special.save
-    redirect '/specials/' + params[:id]
+    redirect '/jenna/specials/' + params[:id]
   end
 
   delete '/specials/:id/delete' do
     @special = Special.find(params[:id])
     @special.destroy
-    redirect '/specials'
+    redirect '/jenna/specials'
   end
   
   # Services Database CRUD
@@ -115,7 +115,7 @@ class Protected < Sinatra::Base
                               species: params[:species],
                               price: params[:price]
                               )
-    redirect '/services'
+    redirect '/jenna/services'
   end
 
   get '/services' do
@@ -135,13 +135,13 @@ class Protected < Sinatra::Base
                     price: params[:price]
                     )
     @service.save
-    redirect '/services/' + params[:id]
+    redirect 'jenna/services/' + params[:id]
   end
 
   delete '/services/:id/delete' do
     @service = Service.find(params[:id])
     @service.destroy
-    redirect '/services'
+    redirect 'jenna/services'
   end
 
   # Photos Database CRUD
@@ -153,7 +153,7 @@ class Protected < Sinatra::Base
     file_action(:before_filename)
     file_action(:after_filename)
 
-    redirect '/photos'
+    redirect '/jenna/photos'
   end
 
   get '/photos' do
@@ -182,7 +182,7 @@ class Protected < Sinatra::Base
     @photo.update(caption: params[:caption])
     @photo.save
 
-    redirect '/photos/' + params[:id]
+    redirect '/jenna/photos/' + params[:id]
   end
 
   delete '/photos/:id/delete' do
@@ -190,7 +190,7 @@ class Protected < Sinatra::Base
     file_action(@photo.before_filename)
     file_action(@photo.after_filename)
     @photo.destroy
-    redirect '/photos'
+    redirect '/jenna/photos'
   end
 
   def file_action(name)
