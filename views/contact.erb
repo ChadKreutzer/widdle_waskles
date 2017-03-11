@@ -1,18 +1,22 @@
 <div class="tab-pane fade" id="contact">
   <h2>Contact</h2>
-  <form action="https://formspree.io/your@email.com" method="POST">
+  <p>Have any questions? Want to get an estimate? Need to make an appointment? Send me an email!</p>
+  <form action='/' name='contact_me' method='post'>
     <fieldset class="form-group">
       <legend>Send us an Email</legend>
-      <label for="fullName">Name:</label>
-      <input type="text" class="form-control" id="fullName" placeholder="First Last" name="name" required>
+      <label for="name">Name:</label>
+      <input type="text" class="form-control"  name='name' id='name' placeholder='First Last' required>
       <br>
-      <label for="sendEmail">Email:</label>
-      <input type="email" class="form-control" id="sendEmail" placeholder="someone@server.com" name="_replyto" required>
+      <label for="mail">Email:</label>
+      <input type="email" class="form-control" name='mail' id='mail' placeholder='someone@server.com' required>
       <br>
-      <label for="mailBody">Type Your Message:</label>
-      <textarea rows="10" class="form-control" id="mailBody" placeholder="I look forward to hearing from you." name="mail" required></textarea>
+      <label for='subject'>Subject</label>   
+      <input type="text" class='form-control' name='subject' id='subject' placeholder='What do you want to talk about?'>
       <br>
-      <input type="button" class="btn btn-primary" id="submitButton" value="Submit">
+      <label for="body">Type Your Message:</label>
+      <textarea rows="10" class="form-control" id="body" placeholder="I look forward to hearing from you." name="body" required></textarea>
+      <br>
+      <input id="submit" type="submit" class="btn btn-lg btn-primary">
     </fieldset>
   </form>
 </div>

@@ -10,6 +10,8 @@ gem 'uglifier'
 gem 'sass'
 gem 'bootstrap-sass'
 gem 'figaro' # bundle exec figaro install
+gem 'puma'
+gem 'pony'
 
 group :development do
   gem 'tux'
