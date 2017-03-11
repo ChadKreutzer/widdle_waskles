@@ -12,8 +12,7 @@ gem 'bootstrap-sass'
 gem 'figaro' # bundle exec figaro install
 gem 'puma'
 gem 'pony'
-gem 'rails_12factor'
-gem 'pg'
+
 
 group :development do
   gem 'tux'
@@ -22,5 +21,6 @@ group :development do
 end
 
 group :production do
-  
+  gem 'rails_12factor'
+  gem 'pg'
 end
