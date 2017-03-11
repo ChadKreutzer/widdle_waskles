@@ -1,3 +1,8 @@
+require 'bundler'
+Bundler.setup :default
+Bundler.require
+Dir["./models/*"].each {|file| require file }
+
 class Public < Sinatra::Base
   get '/' do
     today = Date.today
