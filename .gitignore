@@ -1,6 +1,6 @@
 *.sqlite3
 *.swp
-/public/images/photos/*
+/public/images/photos/*.jpg
 tmp
 logs
 /.bundle
