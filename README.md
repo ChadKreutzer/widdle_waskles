@@ -24,6 +24,8 @@ Website for Jenna's dog grooming business
 * ~~Fix horizontal scroll~~
 * ~~DRY out CMS pages (mini layout?)~~ _(Mostly good)_
 * ~~Password protect CMS~~
-* Implement Mail
+* ~~Change server to puma for deployment~~
+* ~~Add auto-collapse to mobile navbar~~
+* ~~Implement Mail~~
+  * Get email address from Jenna to send mail to
 * Interview Jenna
-* Change server to puma for deployment
