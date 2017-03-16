@@ -9,7 +9,6 @@ gem 'rake'
 gem 'uglifier'
 gem 'sass'
 gem 'bootstrap-sass'
-gem 'figaro' # bundle exec figaro install
 gem 'puma'
 gem 'pony'
 
