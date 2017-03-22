@@ -1,3 +1,5 @@
+require 'sinatra/base'
+
 class Public < Sinatra::Base
   get '/' do
     today = Date.today
