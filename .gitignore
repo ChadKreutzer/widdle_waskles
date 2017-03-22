@@ -1,9 +1,6 @@
 *.sqlite3
 *.swp
-#/public/images/photos/*.jpg
 tmp
 logs
 /.bundle
 /.c9
-# Ignore application configuration
-/config/application.yml
