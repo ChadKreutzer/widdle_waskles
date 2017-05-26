@@ -204,7 +204,7 @@ class Protected < Sinatra::Base
   
   def self.new(*)
     app = Rack::Auth::Digest::MD5.new(super) do |username|
-      { "Widdle Jenna" => "Clean dogs are happy!" }[username]
+      { "user" => "password" }[username]
     end
     app.realm = 'Protected Area'
     app.opaque = 'secretkey'
