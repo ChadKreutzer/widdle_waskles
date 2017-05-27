@@ -1,6 +1,10 @@
 require 'sinatra/base'
+require 'sinatra/activerecord'
+Dir["./models/*"].each {|file| require file }
 
 class Public < Sinatra::Base
+  register Sinatra::ActiveRecordExtension
+  
   get '/' do
     today = Date.today
     @photos = Photo.all
@@ -36,7 +40,9 @@ class Public < Sinatra::Base
   end
 end
 
-class Protected < Sinatra::Base  
+class Protected < Sinatra::Base 
+  register Sinatra::ActiveRecordExtension
+  
   # CMS Dashboard
   get '/' do
     erb :jenna, :layout => :cms_layout

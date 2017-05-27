@@ -1,7 +1,7 @@
 require 'bundler'
 Bundler.setup :default
 Bundler.require
-Dir["./models/*"].each {|file| require file }
+
 require './app'
 
 use Rack::MethodOverride
