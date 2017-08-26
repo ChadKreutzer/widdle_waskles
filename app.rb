@@ -3,6 +3,11 @@ require 'sinatra/activerecord'
 Dir["./models/*"].each {|file| require file }
 
 class Public < Sinatra::Base
+  
+  configure do
+    set :protection, except: [:frame_options]
+  end
+  
   register Sinatra::ActiveRecordExtension
   
   get '/' do
